@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment</title>
+</head>
+
+<body>
+    <h2>Add your comment, Please!!</h2>
+    <section>
+        <h4>Your comments</h4>
+        <div id="comment-container">
+           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur, ipsum voluptatem ad deserunt voluptates incidunt perferendis enim sequi quos. Eligendi commodi sequi, impedit suscipit eum laudantium sapiente asperiores id cupiditate exercitationem quae non error voluptatibus, tenetur culpa, nostrum similique minima quos necessitatibus blanditiis. Reiciendis consectetur libero perspiciatis ab et assumenda cupiditate? Optio quaerat eum ad repellendus ut, possimus fugit architecto tenetur dolor accusantium ullam necessitatibus, mollitia pariatur, officia alias. Recusandae vero velit in atque assumenda. Eveniet ducimus quaerat dolore labore laudantium eligendi quidem minima, nam esse quam, perferendis accusantium ex recusandae. Repudiandae esse ducimus sed dicta? Animi fugit optio dolores.</p>
+           <p>Neque expedita, excepturi impedit nam similique adipisci cum quo praesentium vitae labore, ea iure quos architecto ad quisquam quam in iusto ab harum ratione voluptatum aliquam doloribus deserunt? Est corporis molestias culpa consequatur optio placeat neque debitis unde natus, dicta voluptas perspiciatis fuga possimus veniam nostrum nam nihil saepe. Rem provident assumenda velit reprehenderit quidem nulla, necessitatibus quae minima aperiam sit possimus maiores non. Quis quisquam quasi animi porro quae magnam nostrum ducimus provident. Id mollitia beatae laborum corporis sequi voluptatibus voluptatum amet esse fugiat temporibus, eaque ipsum ea dignissimos earum deserunt magnam voluptas est? Iste earum aut veritatis voluptate.</p>
+
+        </div>
+        <div>
+            <textarea name="" id="new-comment" cols="60" rows="4"></textarea>
+            <br>
+            <button id="submit-comment">Post</button>
+        </div>
+    </section>
+    <script>
+        // 1. add button event handler
+        document.getElementById('submit-comment').addEventListener('click', function () {
+
+            // 2. get user comment
+            const commentBox = document.getElementById('new-comment');
+            // const userComment = commentBox.value;
+
+            // 3. create comment paragraph
+            const newComment = document.createElement('p');
+            newComment.innerText = commentBox.value;
+
+            // 4. append the comment
+            const commentContainer = document.getElementById('comment-container');
+            commentContainer.appendChild(newComment);
+
+            // 5. clean the comment box
+            commentBox.value = '';
+        })
+    </script>
+</body>
+
+</html>

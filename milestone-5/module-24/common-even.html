@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commont even</title>
+</head>
+<body>
+    <p id="change-even-text"></p>
+    <input id="name-field" type="text">
+    <button id="update-name">update</button>
+    <button onclick="evenFunctionClick()">Even Function Click</button>
+    <button id="handle-event">direct add Event Listener</button>
+
+
+
+    <script>
+        function evenFunctionClick() {
+            const p = document.getElementById('change-even-text');
+            p.innerText = 'Even Function Click change even text'
+        }
+
+        document.getElementById('handle-event').addEventListener('click', function () {
+            const p = document.getElementById('change-even-text');
+            p.innerText = 'Even text direct change';
+        })
+
+     /*    document.getElementById('update-name').addEventListener('click', function () {
+            const nameField = document.getElementById('name-field');
+            console.log(nameField);
+            const p = document.getElementById('change-even-text');
+            p.innerText = nameField.Value; 
+            nameField.Value = '';
+        }) */
+
+        document.getElementById('update-name').addEventListener('click', function () {
+            const nameField = document.getElementById('name-field');
+
+            const p = document.getElementById('change-even-text');
+            p.innerText = nameField.value;
+            nameField.value = '';
+        })
+    </script>
+</body>
+</html>
